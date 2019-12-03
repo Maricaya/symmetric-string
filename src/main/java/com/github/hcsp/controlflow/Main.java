@@ -15,11 +15,6 @@ public class Main {
      * @return 若给定的字符串是对称的，返回true，否则返回false
      */
     public static boolean isSymmetric(String str) {
-        String reverseStr = "";
-        int i = str.length();
-        while (i-->0) {
-            reverseStr += str.charAt(i);
-        }
-        return str.equals(reverseStr);
+        return new StringBuilder(str).reverse().toString().equals(str);
     }
 }
